@@ -216,7 +216,8 @@
         "Scraping",
         "Proxies"
       ],
-      "url": "https://github.com/VictorLG98/House-Price-Scraping"
+      "url": "https://github.com/VictorLG98/House-Price-Scraping",
+      "github": "https://github.com/VictorLG98/House-Price-Scraping"
     },
     {
       "name": "Movie database",
@@ -226,7 +227,8 @@
         "API Scraping",
         "Interfaces"
       ],
-      "url": "https://github.com/VictorLG98/House-Price-Scraping"
+      "url": "https://github.com/VictorLG98/House-Price-Scraping",
+      "github": "https://github.com/VictorLG98/Movie-Database"
     },
     {
       "name": "Linkedin job scraper",
@@ -236,7 +238,8 @@
         "Scraping",
         "Playwright"
       ],
-      "url": "https://gist.github.com/VictorLG98/627c263aef47994b628476db017d5c66"
+      "url": "https://gist.github.com/VictorLG98/627c263aef47994b628476db017d5c66",
+      "github": "https://github.com/VictorLG98/Movie-Database"
     }
   ]
 }
