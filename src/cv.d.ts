@@ -129,7 +129,7 @@ interface Projects {
   description: string
   highlights: Highlight
   url: string
-  github: string
+  github?: string
 }
 
 interface Interests {
