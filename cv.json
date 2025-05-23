@@ -29,12 +29,12 @@
   },
   "work": [
     {
-      "name": "Data Seekers",
-      "position": "Software Developer (Web Scraping)",
+      "name": "Data Seekers (Paraty Tech)",
+      "position": "Software Developer",
       "url": "https://www.dataseekers.com/",
       "startDate": "2023-10-01",
       "endDate": null,
-      "summary": "Desarrollo y mantenimiento de Spiders.",
+      "summary": "Encargado del desarrollo y mantenimiento de más de 100 spiders activos en sectores como eventos, hoteles, alquiler de coches, perfumerías y farmacias, así como del desarrollo de nuevos según las necesidades del proyecto. Además, participé en tareas de frontend y backend de la aplicación orientada al cliente, implementando nuevas funcionalidades y mejorando las ya existentes.",
       "highlights": [
         "Started the company"
       ]
