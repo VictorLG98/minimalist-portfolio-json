@@ -10,10 +10,7 @@ const CVS = {
 
 export type CVEs = typeof cvEs
 export type CVEn = typeof cvEn
+export type CV = CVEs | CVEn
 
-export function getCV(lang: "es"): CVEs
-export function getCV(lang: "en"): CVEn
-export function getCV(lang: Lang) {
-  return CVS[lang]
-}
+export const getCV = (lang: Lang): CV => CVS[lang]
 
