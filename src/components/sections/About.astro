@@ -1,11 +1,18 @@
 ---
 import Section from "../Section.astro"
+import { getCV, type Lang } from "@/lib/cv"
 
-import { basics } from "@cv"
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+
+const { basics } = getCV(lang)
 const { summary } = basics
 ---
 
-<Section title="Sobre mí">
+<Section title={lang === "en" ? "About me" : "Sobre mí"}>
   <p>
     {summary}
   </p>

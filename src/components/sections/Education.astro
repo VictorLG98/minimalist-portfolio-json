@@ -1,10 +1,17 @@
 ---
 import Section from "../Section.astro"
+import { getCV, type Lang } from "@/lib/cv"
 
-import { education } from "@cv"
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+
+const { education } = getCV(lang)
 ---
 
-<Section title="Educación">
+<Section title={lang === "en" ? "Education" : "Educación"}>
   <ul>
     {
       education.map(({ institution, startDate, endDate, area }) => {

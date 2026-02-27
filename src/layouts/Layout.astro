@@ -1,17 +1,19 @@
 ---
-import { basics } from "@cv"
+import { getCV, type Lang } from "@/lib/cv"
 
 interface Props {
   title: string
+  lang: Lang
 }
 
-const { title } = Astro.props
+const { title, lang } = Astro.props
 
+const { basics } = getCV(lang)
 const { image, summary, url } = basics
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
@@ -50,6 +52,13 @@ const { image, summary, url } = basics
       <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
       </svg>
+    </button>
+    <button
+      id="lang-toggle"
+      class="lang-toggle"
+      aria-label={lang === "es" ? "Cambiar CV a inglés" : "Change CV to Spanish"}
+    >
+      {lang === "es" ? "EN" : "ES"}
     </button>
   </body>
 </html>
@@ -161,6 +170,28 @@ const { image, summary, url } = basics
     cursor: pointer;
     z-index: 1000;
     transition: background-color 0.3s ease;
+  }
+
+  .lang-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 4.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0 0.75rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .lang-toggle:hover {
+    background: var(--border);
   }
 
   .theme-toggle:hover {
@@ -291,5 +322,17 @@ const { image, summary, url } = basics
   const themeToggle = document.getElementById('theme-toggle');
   if (themeToggle) {
     themeToggle.addEventListener('click', handleToggleClick);
+  }
+
+  const langToggle = document.getElementById('lang-toggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      const currentPath = window.location.pathname;
+      if (currentPath.startsWith('/en')) {
+        window.location.pathname = '/';
+      } else {
+        window.location.pathname = '/en';
+      }
+    });
   }
 </script>

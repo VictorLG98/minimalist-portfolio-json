@@ -1,0 +1,48 @@
+---
+import Section from "../Section.astro"
+import { getCV, type Lang } from "@/lib/cv"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+
+const { languages } = getCV(lang)
+---
+
+<Section title={lang === "en" ? "Languages" : "Idiomas"}>
+  <ul>
+    {
+      languages.map(({ language, fluency }) => (
+        <li>
+          <span>{language}</span>
+          <span>{fluency}</span>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  li span:first-child {
+    font-weight: 600;
+  }
+</style>
+

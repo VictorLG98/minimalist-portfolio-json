@@ -1,5 +1,5 @@
 ---
-import { basics } from "@cv"
+import { getCV, type Lang } from "@/lib/cv"
 import Section from "@/components/Section.astro"
 import Mail from "@/icons/Mail.astro"
 import Phone from "@/icons/Phone.astro"
@@ -9,6 +9,13 @@ import GitHub from "@/icons/GitHub.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 import type { SocialIcon } from "@/types"
 
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+
+const { basics } = getCV(lang)
 const { name, label, image, location, profiles, phone, email } = basics
 const { city, region } = location
 

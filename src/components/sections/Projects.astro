@@ -1,11 +1,18 @@
 ---
 import GitHub from "@/icons/GitHub.astro"
 import Section from "../Section.astro"
+import { getCV, type Lang } from "@/lib/cv"
 
-import { projects } from "@cv"
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+
+const { projects } = getCV(lang)
 ---
 
-<Section title="Proyectos">
+<Section title={lang === "en" ? "Projects" : "Proyectos"}>
   <ul>
     {
       projects.map(

@@ -11,11 +11,19 @@ import Git from "@/icons/git.astro"
 import GitHub from "@/icons/GitHub.astro"
 import Tailwind from "@/icons/tailwind.astro"
 import Next from "@/icons/next.astro"
-import { skills } from "@cv"
+import { getCV, type Lang } from "@/lib/cv"
 import Swift from "@/icons/swift.astro"
 import SwiftUI from "@/icons/swiftui.astro"
 import Kotlin from "@/icons/kotlin.astro"
 import Flutter from "@/icons/flutter.astro"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+
+const { skills } = getCV(lang)
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -36,7 +44,7 @@ const SKILLS_ICONS: Record<string, any> = {
 }
 ---
 
-<Section title="Habilidades">
+<Section title={lang === "en" ? "Skills" : "Habilidades"}>
   <ul>
     {
       skills.map(({ name }) => {

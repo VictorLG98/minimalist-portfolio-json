@@ -137,56 +137,100 @@
       "name": "HTML",
       "level": "Master",
       "keywords": [
-        "Web Development", "Frontend"
+        "Web Development",
+        "Frontend"
       ]
     },
     {
       "name": "CSS",
       "level": "Master",
       "keywords": [
-        "Web Development", "Frontend", "Responsive Design"
+        "Web Development",
+        "Frontend",
+        "Responsive Design"
       ]
     },
     {
       "name": "MySQL",
       "level": "Advanced",
       "keywords": [
-        "Databases", "SQL", "Data Storage", "Backend"
+        "Databases",
+        "SQL",
+        "Data Storage",
+        "Backend"
       ]
     },
     {
       "name": "Git",
       "level": "Advanced",
       "keywords": [
-        "Version Control", "Collaboration", "Source Code"
+        "Version Control",
+        "Collaboration",
+        "Source Code"
       ]
     },
     {
       "name": "GitHub",
       "level": "Advanced",
       "keywords": [
-        "Version Control", "Collaboration", "Source Code", "Git"
+        "Version Control",
+        "Collaboration",
+        "Source Code",
+        "Git"
       ]
     },
     {
       "name": "Scrapy",
       "level": "Advanced",
       "keywords": [
-        "Web Scraping", "Spiders", "Automation"
+        "Web Scraping",
+        "Spiders",
+        "Automation"
       ]
     },
     {
       "name": "Playwright",
       "level": "Advanced",
       "keywords": [
-        "Browser Automation", "Web Scraping", "End-to-End Testing"
+        "Browser Automation",
+        "Web Scraping",
+        "End-to-End Testing"
       ]
     },
     {
       "name": "Proxy Management",
       "level": "Advanced",
       "keywords": [
-        "Rotation", "Anonymity", "Scraping Optimization"
+        "Rotation",
+        "Anonymity",
+        "Scraping Optimization"
+      ]
+    },
+    {
+      "name": "Google Cloud",
+      "level": "Advanced",
+      "keywords": [
+        "Cloud",
+        "Infrastructure",
+        "Deployment"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Big Data",
+      "level": "Advanced",
+      "keywords": [
+        "Data Processing",
+        "Analytics",
+        "Large Datasets"
       ]
     }
   ],
